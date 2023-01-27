@@ -7,7 +7,9 @@ public partial class User
 {
     public int UserId { get; set; }
 
-    public string? Username { get; set; }
+    public string Username { get; set; }
 
-    public string? Pass { get; set; }
+    public string Pass { get; set; }
+
+    public virtual ICollection<HistoryRefreshToken> HistoryRefreshTokens { get; } = new List<HistoryRefreshToken>();
 }
